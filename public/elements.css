@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+
+#topleft {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+}
+
+#topright {
+  position: absolute;
+  top: -50px;
+  right: -30px;
+}
+
+#bottomleft {
+  position: absolute;
+  bottom: -50px;
+  left: -40px;
+}
+
+#bottomright {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+}
+
+body {
+  overflow: hidden;
+  background-color: #e6ffff;
+}
