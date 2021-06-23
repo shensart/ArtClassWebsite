@@ -101,6 +101,27 @@ function App() {
           />
         </div>
       </div>
+      <div>
+        <div
+          style={{
+            borderTop: "10px solid #cc6",
+            marginTop: 50,
+            marginLeft: "10%",
+            marginRight: "10%",
+          }}
+        ></div>
+        <div style={{ textAlign: "center" }}>
+          <p style={{ marginTop: "5px", marginBottom: "5px" }}>Hey there!😊</p>
+          <p style={{ marginTop: "0", marginBottom: "5px" }}>
+            Enjoy the world of art and colours! Checked out our online drawing
+            classes?
+          </p>
+          <p style={{ marginTop: "0", marginBottom: "5px" }}>Interested?😉</p>
+          <p style={{ marginTop: "0", marginBottom: "5px" }}>
+            Get in touch with me for a demo class, or just some art chit-chat!
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
