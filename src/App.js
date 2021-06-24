@@ -1,8 +1,34 @@
 import { CustomCard } from "./CustomCard";
 import Color from "color";
 import { makeStyles } from "@material-ui/core/styles";
+import Fab from "@material-ui/core/Fab";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import TelegramIcon from "@material-ui/icons/Telegram";
+import EmailIcon from "@material-ui/icons/Email";
+import CopyrightNotice from "react-copyright-notice-component";
 
 const useStyles = makeStyles(() => ({
+  telecon: {
+    backgroundColor: "#9381FF",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "#9381FF",
+    },
+  },
+  instacon: {
+    backgroundColor: "#9381FF",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "#9381FF",
+    },
+  },
+  emailcon: {
+    backgroundColor: "#9381FF",
+    color: "white",
+    "&:hover": {
+      backgroundColor: "#9381FF",
+    },
+  },
   actionArea: {
     borderRadius: 16,
     transition: "0.2s",
@@ -121,6 +147,58 @@ function App() {
             Get in touch with me for a demo class, or just some art chit-chat!
           </p>
         </div>
+      </div>
+      <div style={{ marginLeft: "42%", marginTop: "15px" }}>
+        <div
+          style={{
+            display: "inline-block",
+            marginLeft: "10px",
+          }}
+        >
+          <Fab className={styles.telecon} size="medium" aria-label="add">
+            <TelegramIcon />
+          </Fab>
+        </div>
+        <div
+          style={{
+            display: "inline-block",
+            marginLeft: "10px",
+          }}
+        >
+          <Fab
+            className={styles.instacon}
+            size="medium"
+            color="secondary"
+            aria-label="add"
+          >
+            <InstagramIcon />
+          </Fab>
+        </div>
+        <div
+          style={{
+            display: "inline-block",
+            marginLeft: "10px",
+          }}
+        >
+          <Fab
+            className={styles.emailcon}
+            size="medium"
+            backgroundColor="red"
+            aria-label="add"
+          >
+            <EmailIcon />
+          </Fab>
+        </div>
+      </div>
+      <div
+        style={{
+          fontSize: "13px",
+          fontWeight: "bold",
+          marginLeft: "45%",
+          marginTop: "7px",
+        }}
+      >
+        <CopyrightNotice copyrightHolder="CRYSTAL"></CopyrightNotice>
       </div>
     </div>
   );
