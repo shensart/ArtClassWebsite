@@ -5,6 +5,7 @@ import { Route, IndexRoute } from "react-router";
  * Import all page components here
  */
 import App from "./App";
+import Classes from "./Classes";
 import Workshop from "./Workshop";
 
 /**
@@ -14,6 +15,7 @@ import Workshop from "./Workshop";
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={App} />
-    <Route path="/some/where" component={Workshop} />
+    <Route path="/workshop" component={Workshop} />
+    <Route path="/classes" component={Classes} />
   </Route>
 );
