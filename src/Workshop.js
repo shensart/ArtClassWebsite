@@ -66,30 +66,12 @@ function Workshop() {
       <div
         style={{ marginLeft: "45%", marginTop: "50px", marginRight: "10px" }}
       >
-        <Button variant="contained" color="secondary">
+        <Button variant="contained" color="secondary" onClick={togglePopup}>
           Request a Demo
         </Button>
       </div>
       <div>
-        <div>
-          <input
-            type="button"
-            value="Click to Open Popup"
-            onClick={togglePopup}
-          />
-          <p>Lorem ipsum</p>
-          {isOpen && (
-            <Popup
-              content={
-                <>
-                  <b>Design your Popup</b>
-                  <p>Lorem</p>
-                </>
-              }
-              handleClose={togglePopup}
-            />
-          )}
-        </div>
+        <div>{isOpen && <Popup handleClose={togglePopup} />}</div>
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import TelegramIcon from "@material-ui/icons/Telegram";
 import EmailIcon from "@material-ui/icons/Email";
 import CopyrightNotice from "react-copyright-notice-component";
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
   telecon: {
@@ -72,6 +73,8 @@ const useStyles = makeStyles(() => ({
   },
 }));
 function MainPage() {
+  const history = useHistory();
+
   const styles = useStyles({ color: "#FFB17A" });
   const styles2 = useStyles({ color: "#347FC4" });
   return (
@@ -116,6 +119,9 @@ function MainPage() {
             display: "inline-block",
             transform: "rotate(20deg)",
             marginLeft: "10px",
+          }}
+          onClick={() => {
+            history.push("/classes");
           }}
         >
           <CustomCard
