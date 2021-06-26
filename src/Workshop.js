@@ -29,7 +29,7 @@ function Workshop() {
       <div
         style={{
           marginTop: "0",
-          marginLeft: "40%",
+          marginLeft: "38%",
           marginRight: "10px",
           fontFamily: "Chewy",
           fontSize: "30px",
@@ -64,7 +64,7 @@ function Workshop() {
         </Slider>
       </div>
       <div
-        style={{ marginLeft: "45%", marginTop: "50px", marginRight: "10px" }}
+        style={{ marginLeft: "43.5%", marginTop: "50px", marginRight: "10px" }}
       >
         <Button variant="contained" color="secondary" onClick={togglePopup}>
           Request a Demo

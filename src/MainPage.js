@@ -104,6 +104,9 @@ function MainPage() {
             transform: "rotate(-20deg)",
             marginRight: "10px",
           }}
+          onClick={() => {
+            history.push("/workshop");
+          }}
         >
           <CustomCard
             classes={styles}
@@ -155,7 +158,7 @@ function MainPage() {
           </p>
         </div>
       </div>
-      <div style={{ marginLeft: "42%", marginTop: "15px" }}>
+      {/* <div style={{ marginLeft: "42%", marginTop: "15px" }}>
         <div
           style={{
             display: "inline-block",
@@ -196,8 +199,8 @@ function MainPage() {
             <EmailIcon />
           </Fab>
         </div>
-      </div>
-      <div
+      </div> */}
+      {/* <div
         style={{
           fontSize: "13px",
           fontWeight: "bold",
@@ -206,7 +209,7 @@ function MainPage() {
         }}
       >
         <CopyrightNotice copyrightHolder="CRYSTAL"></CopyrightNotice>
-      </div>
+      </div> */}
     </div>
   );
 }

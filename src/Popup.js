@@ -85,10 +85,6 @@ const Popup = (props) => {
   const theme = useTheme();
   const [personName, setPersonName] = React.useState([]);
 
-  //   const handleChange = (event) => {
-  //     setPersonName(event.target.value);
-  //   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -183,15 +179,6 @@ const Popup = (props) => {
             submit
           </Button>
         </div>
-        {/* <form ref="form" onSubmit={this.handleSubmit}>
-        <button type="submit">Do the thing</button>
-      </form> */}
-        {/* <Button variant="contained" color="primary" disableElevation>
-        Disable elevation
-      </Button> */}
-        {/* <form onSubmit={handleSubmit}>
-        <button type="submit">Submit</button>
-      </form> */}
       </div>
     </div>
   );
