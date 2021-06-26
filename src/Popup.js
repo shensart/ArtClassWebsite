@@ -175,7 +175,11 @@ const Popup = (props) => {
           </div>
         </div>
         <div style={{ marginLeft: "40%", marginTop: "1px" }}>
-          <Button variant="contained" color="secondary">
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={props.handleClose}
+          >
             submit
           </Button>
         </div>
