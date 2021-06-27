@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import MainPage from "./MainPage";
 import Workshop from "./Workshop";
 import Classes from "./Classes";
@@ -46,7 +46,7 @@ const useStyles = makeStyles(() => ({
 function App() {
   const styles = useStyles();
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div>
         <Switch>
           <Route path="/" component={MainPage} exact />
@@ -114,7 +114,7 @@ function App() {
           <CopyrightNotice copyrightHolder="CRYSTAL"></CopyrightNotice>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
