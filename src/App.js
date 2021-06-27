@@ -55,16 +55,18 @@ function App() {
           {/* <Route component={Error} /> */}
         </Switch>
         <div style={{ marginLeft: "42%", marginTop: "15px" }}>
-          <div
-            style={{
-              display: "inline-block",
-              marginLeft: "10px",
-            }}
-          >
-            <Fab className={styles.telecon} size="medium" aria-label="add">
-              <TelegramIcon />
-            </Fab>
-          </div>
+          <a href="https://t.me/RiaGohel">
+            <div
+              style={{
+                display: "inline-block",
+                marginLeft: "10px",
+              }}
+            >
+              <Fab className={styles.telecon} size="medium" aria-label="add">
+                <TelegramIcon />
+              </Fab>
+            </div>
+          </a>
           <div
             style={{
               display: "inline-block",
@@ -80,21 +82,26 @@ function App() {
               <InstagramIcon />
             </Fab>
           </div>
-          <div
-            style={{
-              display: "inline-block",
-              marginLeft: "10px",
-            }}
+          <a
+            class="mailto"
+            href="mailto:riag2000@gmail.com?subject=Enquiry about class"
           >
-            <Fab
-              className={styles.emailcon}
-              size="medium"
-              backgroundColor="red"
-              aria-label="add"
+            <div
+              style={{
+                display: "inline-block",
+                marginLeft: "10px",
+              }}
             >
-              <EmailIcon />
-            </Fab>
-          </div>
+              <Fab
+                className={styles.emailcon}
+                size="medium"
+                backgroundColor="red"
+                aria-label="add"
+              >
+                <EmailIcon />
+              </Fab>
+            </div>
+          </a>
         </div>
         <div
           style={{
