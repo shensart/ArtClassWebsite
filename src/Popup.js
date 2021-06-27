@@ -1,23 +1,17 @@
 import React, { useState } from "react";
 import "./Popup.css";
 import MuiPhoneNumber from "material-ui-phone-number";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-import Input from "@material-ui/core/Input";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
-import ListItemText from "@material-ui/core/ListItemText";
 import Select from "@material-ui/core/Select";
-import Checkbox from "@material-ui/core/Checkbox";
 import Button from "@material-ui/core/Button";
-
-// import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from "@date-io/date-fns";
 import "date-fns";
 import {
   MuiPickersUtilsProvider,
-  KeyboardTimePicker,
   KeyboardDatePicker,
 } from "@material-ui/pickers";
 
@@ -53,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Popup = (props) => {
   const classes = useStyles();
-  const themes = useTheme();
   let [number, setNumber] = useState();
   function handleOnChange(value) {
     setNumber(value);
@@ -68,27 +61,6 @@ const Popup = (props) => {
 
   const handleChange = (event) => {
     setAge(event.target.value);
-  };
-
-  const ITEM_HEIGHT = 48;
-  const ITEM_PADDING_TOP = 8;
-  const MenuProps = {
-    PaperProps: {
-      style: {
-        maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-        width: 250,
-      },
-    },
-  };
-
-  const names = ["10am to 12noon", "4pm to 6pm", "9pm to 9:30pm"];
-  const theme = useTheme();
-  const [personName, setPersonName] = React.useState([]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    console.log("Form submitted");
   };
 
   return (
@@ -129,6 +101,7 @@ const Popup = (props) => {
             label="Phone Number"
             defaultCountry={"in"}
             onChange={handleOnChange}
+            placeholder={number}
           />
         </div>
         <div style={{ marginLeft: "8px" }}>
