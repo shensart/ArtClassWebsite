@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,6 +25,7 @@
     "react-slick": "^0.28.1",
     "reactjs-popup": "^2.0.4",
     "sass": "^1.35.1",
+    "shx": "^0.3.3",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^1.0.1"
   },
@@ -32,7 +34,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "copy": "shx cp ./src/CNAME ./build/",
+    "predeploy": "npm run build && npm run copy",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

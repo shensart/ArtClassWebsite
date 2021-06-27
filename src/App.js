@@ -67,21 +67,23 @@ function App() {
               </Fab>
             </div>
           </a>
-          <div
-            style={{
-              display: "inline-block",
-              marginLeft: "10px",
-            }}
-          >
-            <Fab
-              className={styles.instacon}
-              size="medium"
-              color="secondary"
-              aria-label="add"
+          <a href="https://www.instagram.com/kidsdrawingclasses/">
+            <div
+              style={{
+                display: "inline-block",
+                marginLeft: "10px",
+              }}
             >
-              <InstagramIcon />
-            </Fab>
-          </div>
+              <Fab
+                className={styles.instacon}
+                size="medium"
+                color="secondary"
+                aria-label="add"
+              >
+                <InstagramIcon />
+              </Fab>
+            </div>
+          </a>
           <a
             class="mailto"
             href="mailto:riag2000@gmail.com?subject=Enquiry about class"
