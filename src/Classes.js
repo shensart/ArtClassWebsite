@@ -23,9 +23,9 @@ function Classes() {
   return (
     <div style={{ marginRight: "10px" }}>
       <div
+        className="custom-center"
         style={{
           marginTop: "0",
-          marginLeft: "38%",
           marginRight: "10px",
           fontFamily: "Chewy",
           fontSize: "30px",
@@ -55,9 +55,7 @@ function Classes() {
           </div>
         </Slider>
       </div>
-      <div
-        style={{ marginLeft: "43.5%", marginTop: "50px", marginRight: "10px" }}
-      >
+      <div className="custom-center" style={{ marginTop: "50px" }}>
         <Button variant="contained" color="secondary" onClick={togglePopup}>
           Request a Demo
         </Button>

@@ -74,13 +74,7 @@ function MainPage() {
   const styles2 = useStyles({ color: "#347FC4" });
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <div className="custom-center">
         <h1
           style={{
             fontFamily: "Chewy",
@@ -92,7 +86,7 @@ function MainPage() {
           Kids Drawing Classes
         </h1>
       </div>
-      <div style={{ marginLeft: "35%", marginTop: "45px" }}>
+      <div className="custom-center" style={{ marginTop: "45px" }}>
         <div
           style={{
             display: "inline-block",
@@ -128,6 +122,7 @@ function MainPage() {
       </div>
       <div>
         <div
+          className="custom-center"
           style={{
             borderTop: "10px solid #cc6",
             marginTop: 50,

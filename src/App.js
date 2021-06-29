@@ -54,7 +54,7 @@ function App() {
           <Route path="/workshop" component={Classes} />
           {/* <Route component={Error} /> */}
         </Switch>
-        <div style={{ marginLeft: "42%", marginTop: "15px" }}>
+        <div className="custom-center" style={{ marginTop: "15px" }}>
           <a href="https://t.me/RiaGohel">
             <div
               style={{
@@ -106,10 +106,10 @@ function App() {
           </a>
         </div>
         <div
+          className="custom-center"
           style={{
             fontSize: "13px",
             fontWeight: "bold",
-            marginLeft: "45%",
             marginTop: "7px",
           }}
         >
