@@ -8,6 +8,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
+import Swal from "sweetalert2";
+import axios from "axios";
 import DateFnsUtils from "@date-io/date-fns";
 import "date-fns";
 import {
@@ -51,16 +53,57 @@ const Popup = (props) => {
   function handleOnChange(value) {
     setNumber(value);
   }
+
+  let [name, setName] = useState();
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  let [email, setEmail] = useState();
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
   const [selectedDate, setSelectedDate] = useState(new Date());
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
 
-  //   const classes = useStyles();
-  const [age, setAge] = React.useState("");
+  const [time, setTime] = useState();
+  const handleTimeChange = (event) => {
+    setTime(event.target.value);
+  };
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
+  const store = () => {
+    const article = { name, email, phoneno: number, date: selectedDate, time };
+    axios
+      .post(
+        "https://main-artclas-qeynzcwsqsmdbbvx-gtw.qovery.io/users/demorequest",
+        article
+      )
+      .then((response) => {
+        if (response.data === "Info saved") {
+          Swal.fire({
+            title: "Submitted successfully",
+            text: "We will get back to you soon!",
+            confirmButtonText: "OK",
+          });
+        } else if (response.data === "Not saved") {
+          Swal.fire({
+            title: "Failed",
+            icon: "error",
+            text: "Please try again",
+            confirmButtonText: "OK",
+          });
+        } else {
+          Swal.fire({
+            title: "Failed",
+            icon: "error",
+            text: response.data,
+            confirmButtonText: "OK",
+          });
+        }
+      });
   };
 
   return (
@@ -76,6 +119,7 @@ const Popup = (props) => {
             label="Name"
             style={{ margin: 8 }}
             placeholder="Full Name"
+            onChange={handleNameChange}
             fullWidth
             margin="normal"
             InputLabelProps={{
@@ -89,6 +133,7 @@ const Popup = (props) => {
             label="Email ID"
             style={{ margin: 8 }}
             placeholder="Valid Email ID"
+            onChange={handleEmailChange}
             fullWidth
             margin="normal"
             InputLabelProps={{
@@ -137,12 +182,11 @@ const Popup = (props) => {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={age}
-                onChange={handleChange}
+                onChange={handleTimeChange}
               >
-                <MenuItem value={10}>10am to 12noon</MenuItem>
-                <MenuItem value={20}>4pm to 6pm</MenuItem>
-                <MenuItem value={30}>9pm to 10pm</MenuItem>
+                <MenuItem value={"10am to 12noon"}>10am to 12noon</MenuItem>
+                <MenuItem value={"4pm to 6pm"}>4pm to 6pm</MenuItem>
+                <MenuItem value={"9pm to 10pm"}>9pm to 10pm</MenuItem>
               </Select>
             </FormControl>
           </div>
@@ -151,7 +195,10 @@ const Popup = (props) => {
           <Button
             variant="contained"
             color="secondary"
-            onClick={props.handleClose}
+            onClick={() => {
+              store();
+              props.handleClose();
+            }}
           >
             submit
           </Button>
