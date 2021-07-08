@@ -3,6 +3,7 @@ import Color from "color";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { useHistory } from "react-router-dom";
+import "./MainPage.css";
 
 const useStyles = makeStyles(() => ({
   telecon: {
@@ -74,19 +75,10 @@ function MainPage() {
   const styles2 = useStyles({ color: "#347FC4" });
   return (
     <div>
-      <div className="custom-center">
-        <h1
-          style={{
-            fontFamily: "Chewy",
-            fontSize: "100px",
-            marginTop: "10px",
-            marginBottom: "0",
-          }}
-        >
-          Kids Drawing Classes
-        </h1>
+      <div id="headingdiv" className="custom-center">
+        <h1 id="heading">Kids Drawing Classes</h1>
       </div>
-      <div className="custom-center" style={{ marginTop: "45px" }}>
+      <div id="box" className="custom-center">
         <div
           style={{
             display: "inline-block",

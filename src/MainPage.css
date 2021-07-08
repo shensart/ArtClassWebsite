@@ -1,0 +1,28 @@
+#heading {
+  font-family: "Chewy";
+  font-size: 100px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+#box {
+  margin-top: 45px;
+}
+
+/* Small Devices, Tablets */
+@media (max-width: 768px) {
+  #heading {
+    width: 75%;
+    font-size: 30px;
+    margin-left: 50px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  #headingdiv {
+    margin-top: 50px;
+  }
+
+  #box {
+    margin-top: 10px;
+  }
+}
