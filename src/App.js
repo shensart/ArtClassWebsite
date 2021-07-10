@@ -9,6 +9,7 @@ import Fab from "@material-ui/core/Fab";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import EmailIcon from "@material-ui/icons/Email";
+import "./App.css";
 
 const useStyles = makeStyles(() => ({
   telecon: {
@@ -54,66 +55,74 @@ function App() {
           <Route path="/workshop" component={Classes} />
           {/* <Route component={Error} /> */}
         </Switch>
-        <div className="custom-center" style={{ marginTop: "15px" }}>
-          <a href="https://t.me/RiaGohel">
-            <div
-              style={{
-                display: "inline-block",
-                marginLeft: "10px",
-              }}
-            >
-              <Fab className={styles.telecon} size="medium" aria-label="add">
-                <TelegramIcon />
-              </Fab>
-            </div>
-          </a>
-          <a href="https://www.instagram.com/kidsdrawingclasses/">
-            <div
-              style={{
-                display: "inline-block",
-                marginLeft: "10px",
-              }}
-            >
-              <Fab
-                className={styles.instacon}
-                size="medium"
-                color="secondary"
-                aria-label="add"
+        <div id="footerBottom">
+          <div>
+            <div style={{ marginTop: "15px" }}>
+              <a href="https://t.me/RiaGohel">
+                <div
+                  style={{
+                    display: "inline-block",
+                    marginLeft: "10px",
+                  }}
+                >
+                  <Fab
+                    className={styles.telecon}
+                    size="medium"
+                    aria-label="add"
+                  >
+                    <TelegramIcon />
+                  </Fab>
+                </div>
+              </a>
+              <a href="https://www.instagram.com/kidsdrawingclasses/">
+                <div
+                  style={{
+                    display: "inline-block",
+                    marginLeft: "10px",
+                  }}
+                >
+                  <Fab
+                    className={styles.instacon}
+                    size="medium"
+                    color="secondary"
+                    aria-label="add"
+                  >
+                    <InstagramIcon />
+                  </Fab>
+                </div>
+              </a>
+              <a
+                class="mailto"
+                href="mailto:riag2000@gmail.com?subject=Enquiry about class"
               >
-                <InstagramIcon />
-              </Fab>
+                <div
+                  style={{
+                    display: "inline-block",
+                    marginLeft: "10px",
+                  }}
+                >
+                  <Fab
+                    className={styles.emailcon}
+                    size="medium"
+                    backgroundColor="red"
+                    aria-label="add"
+                  >
+                    <EmailIcon />
+                  </Fab>
+                </div>
+              </a>
             </div>
-          </a>
-          <a
-            class="mailto"
-            href="mailto:riag2000@gmail.com?subject=Enquiry about class"
-          >
             <div
+              className="custom-center"
               style={{
-                display: "inline-block",
-                marginLeft: "10px",
+                fontSize: "13px",
+                fontWeight: "bold",
+                marginTop: "7px",
               }}
             >
-              <Fab
-                className={styles.emailcon}
-                size="medium"
-                backgroundColor="red"
-                aria-label="add"
-              >
-                <EmailIcon />
-              </Fab>
+              <CopyrightNotice copyrightHolder="CRYSTAL"></CopyrightNotice>
             </div>
-          </a>
-        </div>
-        <div
-          className="custom-center"
-          style={{
-            fontSize: "13px",
-            fontWeight: "bold",
-            marginTop: "7px",
-          }}
-        >
-          <CopyrightNotice copyrightHolder="CRYSTAL"></CopyrightNotice>
+          </div>
         </div>
       </div>
     </HashRouter>
