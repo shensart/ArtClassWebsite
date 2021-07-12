@@ -40,3 +40,14 @@
   border: 1px solid #999;
   font-size: 20px;
 }
+
+@media (max-width: 768px) {
+  .close-icon {
+    right: 0;
+  }
+
+  .box {
+    width: 89%;
+    margin-left: 0;
+  }
+}
