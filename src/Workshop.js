@@ -22,15 +22,7 @@ function Workshop() {
   };
   return (
     <div style={{ marginRight: "10px" }}>
-      <div
-        className="custom-center"
-        style={{
-          marginTop: "0",
-          marginRight: "10px",
-          fontFamily: "Chewy",
-          fontSize: "30px",
-        }}
-      >
+      <div className="custom-center" id="title">
         <h1>Our collection</h1>
       </div>
       <div style={{ marginLeft: "80px", marginRight: "15px" }}>
