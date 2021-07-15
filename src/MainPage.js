@@ -113,15 +113,7 @@ function MainPage() {
         </div>
       </div>
       <div>
-        <div
-          className="custom-center"
-          style={{
-            borderTop: "10px solid #cc6",
-            marginTop: 50,
-            marginLeft: "10%",
-            marginRight: "10%",
-          }}
-        ></div>
+        <div className="custom-center" id="linemargin"></div>
         <div style={{ textAlign: "center" }}>
           <p style={{ marginTop: "5px", marginBottom: "5px" }}>Hey there!😊</p>
           <p style={{ marginTop: "0", marginBottom: "5px" }}>

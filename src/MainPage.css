@@ -9,6 +9,13 @@
   margin-top: 45px;
 }
 
+#linemargin {
+  border-top: 10px solid #cc6;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 /* Small Devices, Tablets */
 @media (max-width: 768px) {
   #heading {
@@ -23,5 +30,11 @@
   }
   #box {
     margin-top: 50px;
+  }
+  #linemargin {
+    border-top: 10px solid #cc6;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
