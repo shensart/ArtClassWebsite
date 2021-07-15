@@ -44,12 +44,12 @@
 @media (max-width: 768px) {
   .close-icon {
     right: 0;
-    top: calc(100vh - 85vh - 20px);
+    top: calc(100vh - 85vh - 30px);
   }
 
   .box {
     width: 89%;
     margin-left: 0;
-    margin-top: calc(100vh - 85vh - 10px);
+    margin-top: calc(100vh - 85vh - 20px);
   }
 }
